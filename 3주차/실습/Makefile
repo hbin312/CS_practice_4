@@ -1,11 +1,11 @@
-cc = gcc
+cc = g++
 target = exefile
-objects = main.o Output.o String_Manipulation.o
+objects = main.o RangeArray.o Array.o
 
 $(target): $(objects)
 	$(cc) -o $(target) $(objects)
 
-$(objects) : Header.h
+$(objects) : Array.h RangeArray.h
 
 .PHONY : clean
 clean :
